@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DefaultItemAnimator
 import com.codersguidebook.names.databinding.FragmentNamesBinding
+import com.codersguidebook.recyclerviewfastscroller.RecyclerViewScrollbar
 
 class NamesFragment : Fragment() {
 
@@ -24,9 +26,9 @@ class NamesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+        binding.recyclerView.itemAnimator = DefaultItemAnimator()
+        binding.scrollbar.recyclerView = binding.recyclerView
+        binding.recyclerView.addOnScrollListener(RecyclerViewScrollbar.OnScrollListener(binding.scrollbar))
     }
 
     override fun onDestroyView() {
