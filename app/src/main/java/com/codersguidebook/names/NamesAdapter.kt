@@ -3,6 +3,7 @@ package com.codersguidebook.names
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
@@ -16,7 +17,8 @@ class NamesAdapter : Adapter<ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val name = names[position]
+        (holder.itemView.rootView as TextView).text = name
     }
 
     override fun getItemCount(): Int = names.size

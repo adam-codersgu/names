@@ -15,6 +15,8 @@ class NamesFragment : Fragment() {
     private var _binding: FragmentNamesBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var adapter: NamesAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +28,9 @@ class NamesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        adapter = NamesAdapter()
+
+        binding.recyclerView.adapter = adapter
         binding.recyclerView.itemAnimator = DefaultItemAnimator()
         binding.scrollbar.recyclerView = binding.recyclerView
         binding.recyclerView.addOnScrollListener(RecyclerViewScrollbar.OnScrollListener(binding.scrollbar))
