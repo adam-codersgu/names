@@ -34,6 +34,10 @@ class NamesFragment : Fragment() {
         binding.recyclerView.itemAnimator = DefaultItemAnimator()
         binding.scrollbar.recyclerView = binding.recyclerView
         binding.recyclerView.addOnScrollListener(RecyclerViewScrollbar.OnScrollListener(binding.scrollbar))
+
+        val names = resources.getStringArray(R.array.names).toList()
+        adapter.names = names
+        adapter.notifyItemRangeInserted(0, names.size)
     }
 
     override fun onDestroyView() {

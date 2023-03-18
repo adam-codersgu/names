@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="names">
+        <item>Adam</item>
+        <item>Ben</item>
+        <item>Carol</item>
+        <item>David</item>
+        <item>Edward</item>
+        <item>Fiona</item>
+        <item>Georgia</item>
+        <item>Harold</item>
+        <item>Iggie</item>
+        <item>James</item>
+        <item>Kris</item>
+        <item>Lucy</item>
+        <item>Marvin</item>
+        <item>Ned</item>
+        <item>Olivia</item>
+        <item>Peter</item>
+        <item>Quintin</item>
+        <item>Romeo</item>
+        <item>Sarah</item>
+        <item>Tammie</item>
+        <item>Ulysses</item>
+        <item>Vickie</item>
+        <item>Wilson</item>
+        <item>Xavier</item>
+        <item>Yara</item>
+        <item>Zoey</item>
+    </string-array>
+</resources>

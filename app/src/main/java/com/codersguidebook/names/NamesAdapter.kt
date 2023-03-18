@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.codersguidebook.recyclerviewfastscroller.RecyclerViewScrollbar
 
 class NamesAdapter : Adapter<ViewHolder>(), RecyclerViewScrollbar.ValueLabelListener {
-    val names = listOf<String>()
+    var names = listOf<String>()
 
     override fun getValueLabelText(position: Int): String {
         return names[position][0].uppercase()
