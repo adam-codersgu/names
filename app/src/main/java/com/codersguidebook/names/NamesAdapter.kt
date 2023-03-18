@@ -6,9 +6,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.codersguidebook.recyclerviewfastscroller.RecyclerViewScrollbar
 
-class NamesAdapter : Adapter<ViewHolder>() {
+class NamesAdapter : Adapter<ViewHolder>(), RecyclerViewScrollbar.ValueLabelListener {
     val names = listOf<String>()
+
+    override fun getValueLabelText(position: Int): String {
+        return names[position][0].uppercase()
+    }
 
     inner class ViewHolderName(itemView: View) : ViewHolder(itemView)
 
