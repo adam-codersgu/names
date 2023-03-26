@@ -46,5 +46,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    implementation files('libs/recyclerviewfastscroller-release.aar')
+    // Use the below if importing the scrollbar library manually
+    // implementation files('libs/recyclerviewfastscroller-release.aar')
+
+    // Importing the scrollbar library from Maven
+    implementation 'com.codersguidebook:recyclerview-fastscroller-with-value-label:1.0'
 }
